@@ -1,5 +1,3 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/x3fall3nangel/mercury-lib-edit/master/src.lua"))()
-
 local GUI = Library:Create{
     Name = "Mellow-Hub",
     Size = UDim2.fromOffset(600, 400),
@@ -212,7 +210,7 @@ task.spawn(function()
                 if CompletionRegion:FindFirstChild("Primary") then
                     completepos = CompletionRegion:FindFirstChild("Primary").CFrame
                 end
-                task.wait(20)
+                task.wait(25)
                 Systems:WaitForChild("Navigate"):WaitForChild("Teleport"):InvokeServer(completepos)
                 if not getvehicle() or not Driveworld["autodelivery"] then
                     return
