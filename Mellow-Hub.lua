@@ -177,7 +177,7 @@ task.spawn(function()
                     else
                         Systems:WaitForChild("Cars"):WaitForChild("SpawnPlayerCar"):InvokeServer(normalcar)
                     end
-                    task.wait(.3)
+                    task.wait(.5)
                     Systems:WaitForChild("Cars"):WaitForChild("EnterCar"):InvokeServer(getvehicle(), getvehicle():FindFirstChild("Seats"):FindFirstChild("Driver"))
                 end
                 local completepos
@@ -191,7 +191,7 @@ task.spawn(function()
                     end
                 until job.Visible == true or Driveworld["autodelivery"] == false
                 print("Start Job")
-                task.wait(.3)
+                task.wait(.5)
                 repeat task.wait() 
                     CompletionRegion = workspace:FindFirstChild("CompletionRegion")
                     if CompletionRegion then
@@ -212,14 +212,14 @@ task.spawn(function()
                 if CompletionRegion:FindFirstChild("Primary") then
                     completepos = CompletionRegion:FindFirstChild("Primary").CFrame
                 end
-                task.wait(6)
+                task.wait(20)
                 Systems:WaitForChild("Navigate"):WaitForChild("Teleport"):InvokeServer(completepos)
                 if not getvehicle() or not Driveworld["autodelivery"] then
                     return
                 end
-                task.wait(.3)
+                task.wait(.5)
                 Systems:WaitForChild("Jobs"):WaitForChild("CompleteJob"):InvokeServer()
-                task.wait(.3)
+                task.wait(.5)
                 if lp.PlayerGui.Interface.JobComplete.Enabled == true then
                     Systems:WaitForChild("Jobs"):WaitForChild("CashBankedEarnings"):FireServer()
                     firesignal(lp.PlayerGui.Interface.JobComplete.Window.Content.Buttons.Close.MouseButton1Click)
