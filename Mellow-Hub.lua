@@ -1,3 +1,5 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/babycodez5k/Mellow-Hub/main/src.lua"))()
+
 local GUI = Library:Create{
     Name = "Mellow-Hub",
     Size = UDim2.fromOffset(600, 400),
