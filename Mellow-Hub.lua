@@ -212,7 +212,7 @@ task.spawn(function()
                 if CompletionRegion:FindFirstChild("Primary") then
                     completepos = CompletionRegion:FindFirstChild("Primary").CFrame
                 end
-                task.wait(25)
+                task.wait(15)
                 Systems:WaitForChild("Navigate"):WaitForChild("Teleport"):InvokeServer(completepos)
                 if not getvehicle() or not Driveworld["autodelivery"] then
                     return
